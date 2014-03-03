@@ -206,8 +206,8 @@
     [self eigtyIniateGame];
     
     // clear mainTextField
-    [_mainTextField setText:@""];
-    
+    // [_mainTextField setText:@""];
+    _mainTextField.text = [NSString stringWithFormat:@""];
 
     
 }
