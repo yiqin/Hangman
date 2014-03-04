@@ -19,7 +19,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *guessHistory;
 
-@property (strong, nonatomic) IBOutlet UITextField *mainTextField;
+@property (weak, nonatomic) IBOutlet UITextField *mainTextField;
 
 @property (strong, nonatomic) IBOutlet UILabel *numberOfGuessAllowedForThisWord;
 

@@ -208,6 +208,7 @@
     // clear mainTextField
     // [_mainTextField setText:@""];
     _mainTextField.text = [NSString stringWithFormat:@""];
+    //_mainTextField.text = nil;
 
     
 }
