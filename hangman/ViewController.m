@@ -91,8 +91,8 @@
         
         // split word.
         BOOL wordChar = YES;
-        
-        NSMutableArray *wordArray = [NSMutableArray array];
+        NSMutableArray *wordArray =[NSMutableArray arrayWithCapacity:26];
+        // NSMutableArray *wordArray = [NSMutableArray array];
         NSString *wordList = [NSString stringWithString: self.word.text];
         
         for (int i = 0; i < [wordList length]; i++) {
@@ -207,7 +207,7 @@
     
     // clear mainTextField
     // [_mainTextField setText:@""];
-    _mainTextField.text = [NSString stringWithFormat:@""];
+    self.mainTextField.text = [NSString stringWithFormat:@""];
     //_mainTextField.text = nil;
 
     
