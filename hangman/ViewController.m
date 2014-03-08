@@ -71,13 +71,20 @@
     [_mainTextField becomeFirstResponder];
     
     // Multiple lines of text in UILabel
-    _guessHistory.lineBreakMode = NSLineBreakByWordWrapping;
-    _guessHistory.numberOfLines = 0;
+    // The crash is triggered by the special multistage text input mode,
+    // so you should avoid changing the text while this mode is active.
+//    _guessHistory.lineBreakMode = NSLineBreakByWordWrapping;
+//    _guessHistory.numberOfLines = 0;
     
 }
 
 
 - (IBAction)makeAGuess:(id)sender {
+    
+    if (self.mainTextField.markedTextRange == nil) {
+        // Perform change
+    
+    
     NSLog(@"Make A Guess");
     
     // only accept CAPITAL Letter
@@ -136,6 +143,8 @@
                     // NSLog(@"These string are different");
                 }
             }
+            
+            
         }
         
         
@@ -208,8 +217,11 @@
     // clear mainTextField
     // [_mainTextField setText:@""];
     self.mainTextField.text = [NSString stringWithFormat:@""];
+    
+    
+    
     //_mainTextField.text = nil;
-
+    }
     
 }
 
